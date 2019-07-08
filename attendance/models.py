@@ -5,6 +5,9 @@ from django.db import models
 class Gender(models.Model):
     gender_info = models.CharField(max_length=1)
 
+    def __str__(self):
+        return 'Male' if self.gender_info is 'm' else 'Female'
+
 class Person(models.Model):
     first = models.CharField(max_length = 30)
     last = models.CharField(max_length = 30)
