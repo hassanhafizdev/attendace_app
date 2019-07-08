@@ -3,8 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Gender(models.Model):
-    male = models.CharField(max_length=1)
-    female = models.CharField(max_length=1)
+    gender_info = models.CharField(max_length=1)
 
 class Person(models.Model):
     first = models.CharField(max_length = 30)
