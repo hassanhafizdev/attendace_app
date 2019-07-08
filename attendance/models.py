@@ -10,7 +10,7 @@ class Person(models.Model):
     first = models.CharField(max_length = 30)
     last = models.CharField(max_length = 30)
     date_of_birth = models.DateField(name='Date of birth')
-    gender = models.ForeignKey(Gender, on_delete=models.SET_NULL, null=False)
+    gender = models.ForeignKey(Gender, on_delete=models.SET_NULL, null = True)
     cnic = models.CharField(max_length=13, primary_key=True)
 
     def __str__(self):
